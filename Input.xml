@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Input xmlns:tns="http://www.example.org/Input" xmlns:tns1="http://www.example.org/Component" xmlns:tns2="http://www.example.org/Task" xmlns:tns3="http://www.example.org/ComponentInterface" xmlns:tns4="http://www.example.org/Resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/Input Input.xsd ">
+  <tns:Components>
+    <tns1:Component>
+      <tns1:ID>tns1:ID</tns1:ID>
+      <tns1:Tasks>
+        <tns2:Task>
+          <tns2:ID>tns2:ID</tns2:ID>
+          <tns2:Period>0</tns2:Period>
+          <tns2:RelativeDeadline>0</tns2:RelativeDeadline>
+          <tns2:WCET>0</tns2:WCET>
+        </tns2:Task>
+      </tns1:Tasks>
+      <tns1:ComponentInterfaces>
+        <tns3:ComponentInterface>
+          <tns3:ID>tns3:ID</tns3:ID>
+          <tns3:Budget>0</tns3:Budget>
+          <tns3:Period>0</tns3:Period>
+        </tns3:ComponentInterface>
+      </tns1:ComponentInterfaces>
+      <tns1:Resources/>
+    </tns1:Component>
+  </tns:Components>
+</tns:Input>

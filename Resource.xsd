@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://retis.sssup.it/cbsd" xmlns:cbsd="http://retis.sssup.it/cbsd" elementFormDefault="qualified">
+
+    <element name="Resource">
+    	<complexType>
+    		<sequence maxOccurs="1" minOccurs="1">
+    			<element name="ID" type="string"></element>
+    			<element name="Type">
+    				<simpleType>
+    					<restriction base="string">
+    						<enumeration value="Component Resource"></enumeration>
+    						<enumeration value="System Resource"></enumeration>
+    					</restriction>
+    				</simpleType>
+    			</element>
+    			<element name="MRHT" type="int"></element>
+    		</sequence>
+    	</complexType>
+    </element>
+</schema>

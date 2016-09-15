@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://retis.sssup.it/cbsd"
+	elementFormDefault="qualified"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://retis.sssup.it/cbsd">
+
+
+	<xsd:include schemaLocation="Task.xsd"></xsd:include>
+
+	<xsd:include schemaLocation="ComponentInterface.xsd"></xsd:include>
+	<xsd:include schemaLocation="Resource.xsd"></xsd:include>
+	<xsd:element name="Component">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="ID" type="xsd:string"></xsd:element>
+				<xsd:element name="Tasks">
+					<xsd:complexType>
+						<xsd:sequence maxOccurs="unbounded"
+							minOccurs="1">
+							<xsd:element ref="Task"></xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="ComponentInterfaces">
+					<xsd:complexType>
+						<xsd:sequence maxOccurs="unbounded"
+							minOccurs="1">
+							<xsd:element
+								ref="ComponentInterface">
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Resources">
+					<xsd:complexType>
+						<xsd:sequence maxOccurs="unbounded"
+							minOccurs="0">
+							<xsd:element ref="Resource"></xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

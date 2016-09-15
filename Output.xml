@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:MappedServer xmlns:tns="http://www.example.org/Integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/Integration Output.xsd ">
+  <tns:ComponentID>tns:ComponentID</tns:ComponentID>
+  <tns:ServerID>tns:ServerID</tns:ServerID>
+</tns:MappedServer>

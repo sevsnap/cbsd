@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://retis.sssup.it/cbsd"
+	xmlns:cbsd="http://retis.sssup.it/cbsd"
+	elementFormDefault="qualified">
+
+	<element name="ComponentInterface">
+		<complexType>
+			<sequence maxOccurs="unbounded" minOccurs="1">
+				<element name="ID" type="string"></element>
+				<element name="Budget" type="int"></element>
+				<element name="Period" type="int"></element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
