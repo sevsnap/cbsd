@@ -5,7 +5,8 @@
 	<element name="Task">
 		<complexType>
 			<sequence maxOccurs="1" minOccurs="1">
-				<element name="ID" type="string"></element>
+				<element name="TaskID" type="string"></element>
+				<element name="VirtualProcessorID" type="string"></element>
 				<element name="Period" type="int"></element>
 				<element name="RelativeDeadline" type="int"></element>
 				<element name="WCET" type="int"></element>

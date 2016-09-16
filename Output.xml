@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:MappedServer xmlns:tns="http://www.example.org/Integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/Integration Output.xsd ">
-  <tns:ComponentID>tns:ComponentID</tns:ComponentID>
-  <tns:ServerID>tns:ServerID</tns:ServerID>
-</tns:MappedServer>
+<cbsd:Output xmlns:cbsd="http://retis.sssup.it/cbsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://retis.sssup.it/cbsd Output.xsd ">
+  <cbsd:Mappings>
+    <cbsd:Mapping>
+      <cbsd:ProcessorID>1</cbsd:ProcessorID>
+      <cbsd:MappedServers>
+        <cbsd:MappedServer>
+          <cbsd:ComponentID>1</cbsd:ComponentID>
+          <cbsd:ComponentInterfaceID>1</cbsd:ComponentInterfaceID>
+          <cbsd:ReservationServerID>1</cbsd:ReservationServerID>
+        </cbsd:MappedServer>
+      </cbsd:MappedServers>
+    </cbsd:Mapping>
+  </cbsd:Mappings>
+</cbsd:Output>

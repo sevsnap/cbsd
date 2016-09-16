@@ -6,11 +6,25 @@
 
 	<element name="ComponentInterface">
 		<complexType>
-			<sequence maxOccurs="unbounded" minOccurs="1">
-				<element name="ID" type="string"></element>
-				<element name="Budget" type="int"></element>
-				<element name="Period" type="int"></element>
+			<sequence maxOccurs="1" minOccurs="1">
+				<element name="ComponentInterfaceID" type="string"></element>
+				<element name="ReservationServers">
+					<complexType>
+						<sequence maxOccurs="unbounded" minOccurs="1">
+							<element ref="cbsd:ReservationServer"></element>
+						</sequence>
+					</complexType></element>
 			</sequence>
 		</complexType>
 	</element>
+	
+	<element name="ReservationServer">
+	<complexType>
+		<sequence maxOccurs="1" minOccurs="1">
+			<element name="ReservationServerID" type="string"></element>
+			<element name="Budget" type="int"></element>
+			<element name="Period" type="int"></element>
+		</sequence>
+	</complexType>
+</element>
 </schema>

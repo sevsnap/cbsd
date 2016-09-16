@@ -12,7 +12,7 @@
 	<xsd:element name="Component">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="ID" type="xsd:string"></xsd:element>
+				<xsd:element name="ComponentID" type="xsd:string"></xsd:element>
 				<xsd:element name="Tasks">
 					<xsd:complexType>
 						<xsd:sequence maxOccurs="unbounded"
@@ -42,5 +42,4 @@
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
-
 </xsd:schema>

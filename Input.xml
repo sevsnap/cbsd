@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Input xmlns:tns="http://www.example.org/Input" xmlns:tns1="http://www.example.org/Component" xmlns:tns2="http://www.example.org/Task" xmlns:tns3="http://www.example.org/ComponentInterface" xmlns:tns4="http://www.example.org/Resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/Input Input.xsd ">
-  <tns:Components>
-    <tns1:Component>
-      <tns1:ID>tns1:ID</tns1:ID>
-      <tns1:Tasks>
-        <tns2:Task>
-          <tns2:ID>tns2:ID</tns2:ID>
-          <tns2:Period>0</tns2:Period>
-          <tns2:RelativeDeadline>0</tns2:RelativeDeadline>
-          <tns2:WCET>0</tns2:WCET>
-        </tns2:Task>
-      </tns1:Tasks>
-      <tns1:ComponentInterfaces>
-        <tns3:ComponentInterface>
-          <tns3:ID>tns3:ID</tns3:ID>
-          <tns3:Budget>0</tns3:Budget>
-          <tns3:Period>0</tns3:Period>
-        </tns3:ComponentInterface>
-      </tns1:ComponentInterfaces>
-      <tns1:Resources/>
-    </tns1:Component>
-  </tns:Components>
-</tns:Input>
+<cbsd:Input xmlns:cbsd="http://retis.sssup.it/cbsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://retis.sssup.it/cbsd Input.xsd ">
+  <cbsd:Components>
+    <cbsd:Component>
+      <cbsd:ComponentID>1</cbsd:ComponentID>
+      <cbsd:Tasks>
+        <cbsd:Task>
+          <cbsd:TaskID>1</cbsd:TaskID>
+          <cbsd:VirtualProcessorID>1</cbsd:VirtualProcessorID>
+          <cbsd:Period>10</cbsd:Period>
+          <cbsd:RelativeDeadline>10</cbsd:RelativeDeadline>
+          <cbsd:WCET>5</cbsd:WCET>
+        </cbsd:Task>
+      </cbsd:Tasks>
+      <cbsd:ComponentInterfaces>
+        <cbsd:ComponentInterface>
+          <cbsd:ComponentInterfaceID>1</cbsd:ComponentInterfaceID>
+          <cbsd:ReservationServers>
+            <cbsd:ReservationServer>
+              <cbsd:ReservationServerID>1</cbsd:ReservationServerID>
+              <cbsd:Budget>5</cbsd:Budget>
+              <cbsd:Period>10</cbsd:Period>
+            </cbsd:ReservationServer>
+          </cbsd:ReservationServers>
+        </cbsd:ComponentInterface>
+      </cbsd:ComponentInterfaces>
+      <cbsd:Resources>
+        <cbsd:Resource>
+          <cbsd:ResourceID>1</cbsd:ResourceID>
+          <cbsd:Type>Component Resource</cbsd:Type>
+          <cbsd:MRHT>3</cbsd:MRHT>
+        </cbsd:Resource>
+      </cbsd:Resources>
+    </cbsd:Component>
+  </cbsd:Components>
+</cbsd:Input>

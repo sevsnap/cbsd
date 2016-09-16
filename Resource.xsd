@@ -4,7 +4,7 @@
     <element name="Resource">
     	<complexType>
     		<sequence maxOccurs="1" minOccurs="1">
-    			<element name="ID" type="string"></element>
+    			<element name="ResourceID" type="string"></element>
     			<element name="Type">
     				<simpleType>
     					<restriction base="string">

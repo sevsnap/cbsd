@@ -34,7 +34,8 @@
     	<complexType>
     		<sequence maxOccurs="unbounded" minOccurs="1">
     			<element name="ComponentID" type="string"></element>
-    			<element name="ServerID" type="string"></element>
+    			<element name="ComponentInterfaceID" type="string"></element>
+    			<element name="ReservationServerID" type="string"></element>
     		</sequence>
     	</complexType>
     </element>
