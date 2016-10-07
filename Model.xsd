@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://retis.sssup.it/cbsd"
+	xmlns:tns="http://www.example.org/Input" elementFormDefault="qualified"
+	xmlns:cbsd="http://retis.sssup.it/cbsd">
+	
+    <include schemaLocation="Component.xsd"></include>
+	<element name="Input">
+		<complexType>
+			<sequence maxOccurs="1" minOccurs="1">
+				<element name="Components">
+					<complexType>
+						<sequence maxOccurs="unbounded" minOccurs="1">
+							<element ref="cbsd:Component"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	
+    <element name="Output">
+    	<complexType>
+    		<sequence maxOccurs="1" minOccurs="1">
+    			<element name="Mappings">
+    				<complexType>
+    					<sequence maxOccurs="unbounded" minOccurs="1">
+    						<element
+    							ref="cbsd:Mapping">
+    						</element>
+    					</sequence>
+    				</complexType></element>
+    		</sequence>
+    	</complexType>
+    </element>
+
+    <element name="Mapping">
+    	<complexType>
+    		<sequence maxOccurs="unbounded" minOccurs="1">
+    			<element name="ProcessorID" type="string"></element>
+    			<element name="MappedServers">
+    				<complexType>
+    					<sequence maxOccurs="unbounded" minOccurs="1">
+    						<element ref="cbsd:MappedServer"></element>
+    					</sequence>
+    				</complexType></element>
+    		</sequence>
+    	</complexType>
+    </element>
+
+    <element name="MappedServer">
+    	<complexType>
+    		<sequence maxOccurs="unbounded" minOccurs="1">
+    			<element name="ComponentID" type="string"></element>
+    			<element name="ComponentInterfaceID" type="string"></element>
+    			<element name="ReservationServerID" type="string"></element>
+    		</sequence>
+    	</complexType>
+    </element>
+	
+	
+</schema>
