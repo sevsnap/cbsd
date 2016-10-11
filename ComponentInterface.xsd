@@ -24,7 +24,24 @@
 			<element name="ReservationServerID" type="string"></element>
 			<element name="Budget" type="int"></element>
 			<element name="Period" type="int"></element>
+			<element name="MaxResHoldingTimeVector">
+				<complexType>
+					<sequence maxOccurs="unbounded" minOccurs="1">
+						<element name="MaxResHoldingTimeVectorElement">
+							<complexType>
+								<sequence maxOccurs="1" minOccurs="1">
+									<element name="ResourceID"
+										type="string">
+									</element>
+									<element name="MaxResHoldingTime"
+										type="int">
+									</element>
+								</sequence>
+							</complexType></element>
+					</sequence>
+				</complexType>
+			</element>
 		</sequence>
 	</complexType>
-</element>
+	</element>
 </schema>

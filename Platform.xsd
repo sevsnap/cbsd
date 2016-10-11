@@ -5,7 +5,10 @@
     <element name="Platform">
     	<complexType>
     		<sequence>
-    			<element name="ProcessorNumber" type="int" maxOccurs="1" minOccurs="1"></element>
+    			<element name="PlatformID" type="string"></element>
+    			<element name="ProcessorNumber" type="int" maxOccurs="1"
+    				minOccurs="1">
+    			</element>
     		</sequence>
     	</complexType>
     </element>

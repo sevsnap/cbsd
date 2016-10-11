@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://retis.sssup.it/cbsd" xmlns:cbsd="http://retis.sssup.it/cbsd"
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://retis.sssup.it/cbsd"
+	xmlns:cbsd="http://retis.sssup.it/cbsd"
 	elementFormDefault="qualified">
 
+	<include schemaLocation="Resource.xsd"></include>
 	<element name="Task">
 		<complexType>
 			<sequence maxOccurs="1" minOccurs="1">
@@ -9,9 +12,34 @@
 				<element name="VirtualProcessorID" type="string"></element>
 				<element name="Period" type="int"></element>
 				<element name="RelativeDeadline" type="int"></element>
-				<element name="WCET" type="int"></element>
+				<element name="PlatformWCETs">
+					<complexType>
+						<sequence maxOccurs="unbounded" minOccurs="1">
+							<element name="WCETs">
+								<complexType>
+									<sequence maxOccurs="1"
+										minOccurs="1">
+										<element name="PlatformID"
+											type="string">
+										</element>
+										<element name="WCET"
+											type="int">
+										</element>
+									</sequence>
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+				<element name="Resources" type="cbsd:ResourcesType" maxOccurs="1" minOccurs="0"></element>
 			</sequence>
 		</complexType>
 	</element>
 
+
+	<complexType name="ResourcesType">
+		<sequence maxOccurs="unbounded" minOccurs="1">
+			<element ref="cbsd:Resource"></element>
+		</sequence>
+	</complexType>
 </schema>

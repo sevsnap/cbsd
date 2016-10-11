@@ -13,7 +13,7 @@
     					</restriction>
     				</simpleType>
     			</element>
-    			<element name="MRHT" type="int"></element>
+    			<element name="MaxResHoldingTime" type="int"></element>
     		</sequence>
     	</complexType>
     </element>
